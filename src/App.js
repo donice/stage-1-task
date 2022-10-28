@@ -1,51 +1,82 @@
 import React from "react";
 import ProfileImage from "../src/img/ProfilePic.jpg";
-import './index.css'
+import Slack from "./img/slack.svg";
+import Github from "./img/Social_icon.svg";
+import "./index.css";
 
 function App() {
   const buttons = [
     {
       linkName: "Twitter Link",
-      href: "",
-      id: "twitter"
+      href: "https://twitter.com/drdonice",
+      id: "twitter",
     },
     {
       linkName: "Zuri Team",
       href: "https://training.zuri.team/",
-      id: "btn__zuri"
+      id: "btn__zuri",
     },
     {
       linkName: "Zuri Books",
-      href: "http://books.zuri.team ",
-      id: "books"
-    },
-    {
-      linkName: "Background Check for Coders",
-      href: "",
-      id: ""
+      href: "http://books.zuri.team",
+      id: "books",
     },
     {
       linkName: "Python Books",
-      href: "",
-      id: "book__python"
+      href: "https://books.zuri.team/python-for-beginners?ref_id=drdonice",
+      id: "book__python",
+    },
+    {
+      linkName: "Background Check for Coders",
+      href: "https://background.zuri.team,",
+      id: "pitch",
+    },
+    {
+      linkName: "Design Books",
+      href: "https://books.zuri.team/design-rules ",
+      id: "book__design",
     },
   ];
 
   return (
-    <div className="App p-10">
-        <img 
-          src={ProfileImage} 
-          alt="Profile" 
-          id="profile__img"
-          className="w-20 rounded-full border-sky-500"
-          />
-          <h1 className="text-xl py-4 font-bold">Donice Ubaru</h1>
+    <div className="App">
+      <img
+        src={ProfileImage}
+        alt="Profile"
+        id="profile__img"
+        className="w-20 mt-6 rounded-full border-sky-500"
+      />
+      <h1 className="text-2xl py-4 font-bold">Donice Ubaru</h1>
 
-      <div>
+      <div className="w-full">
         {buttons.map((button) => (
-            <a href={button.href} id={button.id} className="text-sm py-5 m-2">{button.linkName}</a>
+          <div className=" bg-gray-200 rounded-lg text-sm p-5 my-5 drop-shadow-[0_15px_25px_rgba(0,0,0,0.02)] hover:drop-shadow-md hover:bg-gray-300">
+            <a href={button.href} id={button.id}>
+              {button.linkName}
+            </a>
+          </div>
         ))}
       </div>
+
+      <div className="flex">
+        <a href="#" type="hidden" id="slack">
+          <img
+            src={Slack}
+            alt="slack"
+            className="w-8 rounded-full border-sky-500 m-2"
+          />
+        </a>
+        <a href="https://github.com/Donice" id="github"> 
+          <img
+          src={Github}
+          alt="github"
+          className="w-8 rounded-full border-sky-500 m-2"
+        />
+        </a>
+        
+      </div>
+
+      <div className="border w-full mt-8"></div>
     </div>
   );
 }
