@@ -4,7 +4,8 @@ import Slack from "./img/slack.svg";
 import Github from "./img/Social_icon.svg";
 import Ingresive from "./img/ingressive.png";
 import Zuri from "./img/zuri.png";
-import { HiOutlineArrowUturnRight } from 'react-icons/hi2'
+import { HiOutlineArrowUturnRight } from "react-icons/hi2";
+import { BiDotsHorizontalRounded } from "react-icons/bi";
 import "./index.css";
 
 function App() {
@@ -43,20 +44,26 @@ function App() {
 
   return (
     <div className="App">
-      <div className="w-10 h-10 mt-4 flex border-2 border-dashed rounded-full hover:border-4 hover:border-double">
-        <HiOutlineArrowUturnRight />
+      <div>
+        <div className="hidden md:block right w-10 h-10 mt-4 mr-6 font-bold border-2 border-dashed rounded-full md:mr-20 hover:border-4 hover:border-double">
+          <HiOutlineArrowUturnRight />
+        </div>
+        <div className="block md:hidden right w-10 h-10 mt-4 mr-6 font-bold border-2 border-dashed rounded-full md:mr-20 hover:border-4 hover:border-double">
+          <BiDotsHorizontalRounded />
+        </div>
       </div>
+
       <img
         src={ProfileImage}
         alt="Profile"
         id="profile__img"
-        className="w-20 rounded-full border-sky-500"
+        className="mt-8 w-20 rounded-full border-sky-500"
       />
       <h1 className="text-2xl py-4 font-bold">Donice Ubaru</h1>
 
       <div className="w-full">
         {buttons.map((button) => (
-          <div className=" bg-gray-200 rounded-lg text-sm p-5 my-5 drop-shadow-[0_15px_25px_rgba(0,0,0,0.02)] hover:drop-shadow-md hover:bg-gray-300">
+          <div className="bg-gray-200 rounded-lg text-sm p-5 my-5 drop-shadow-[0_15px_25px_rgba(0,0,0,0.02)] hover:drop-shadow-md hover:bg-gray-300">
             <a href={button.href} id={button.id}>
               {button.linkName}
             </a>
@@ -72,14 +79,13 @@ function App() {
             className="w-8 rounded-full border-sky-500 m-2"
           />
         </a>
-        <a href="https://github.com/Donice" id="github"> 
+        <a href="https://github.com/Donice" id="github">
           <img
-          src={Github}
-          alt="github"
-          className="w-8 rounded-full border-sky-500 m-2"
-        />
+            src={Github}
+            alt="github"
+            className="w-8 rounded-full border-sky-500 m-2"
+          />
         </a>
-        
       </div>
 
       <div className="border w-full mt-8"></div>
