@@ -92,7 +92,7 @@ function App() {
         <img
           src={Ingresive}
           alt="IG4"
-          className="w-36 border-sky-500 mt-2 md:w-28"
+          className="w-28 border-sky-500 mt-2 md:w-28"
         />
       </footer>
     </div>
