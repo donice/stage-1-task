@@ -4,6 +4,7 @@ import Slack from "./img/slack.svg";
 import Github from "./img/Social_icon.svg";
 import Ingresive from "./img/ingressive.png";
 import Zuri from "./img/zuri.png";
+import { HiOutlineArrowUturnRight } from 'react-icons/hi2'
 import "./index.css";
 
 function App() {
@@ -42,11 +43,14 @@ function App() {
 
   return (
     <div className="App">
+      <div className="w-10 h-10 mt-4 flex border-2 border-dashed rounded-full hover:border-4 hover:border-double">
+        <HiOutlineArrowUturnRight />
+      </div>
       <img
         src={ProfileImage}
         alt="Profile"
         id="profile__img"
-        className="w-20 mt-6 rounded-full border-sky-500"
+        className="w-20 rounded-full border-sky-500"
       />
       <h1 className="text-2xl py-4 font-bold">Donice Ubaru</h1>
 
