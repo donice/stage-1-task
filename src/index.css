@@ -24,11 +24,44 @@ code {
   flex-direction: column;
   text-align: center;
   height: 100%;
-  /* border: 2px solid red */
 }
-.right {
+.rightMobile {
   position: absolute;
   right: 0px;
-  /* width: 300px; */
   padding: 10px;
+}
+.rightDesktop {
+  position: absolute;
+  top: 20px;
+  right: 350px;
+  padding: 10px;
+}
+
+.overlay {
+  position: absolute;
+  top: 14.5%;
+  left: 33%;
+  width: 425px;
+  height: 225px;
+  opacity: 0;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.icon {
+  color: white;
+  font-size: 28px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .overlay {
+    display: none;
+    opacity: 0;
+  }
 }
