@@ -2,12 +2,11 @@ import React from "react";
 import ProfileImage from "../src/img/ProfilePic.jpg";
 import Slack from "./img/slack.svg";
 import Github from "./img/Social_icon.svg";
-import Ingresive from "./img/ingressive.png";
-import Zuri from "./img/zuri.png";
 import Link from "./img/Icon-md.png";
 import { FiCamera } from "react-icons/fi";
 import { BiDotsHorizontalRounded } from "react-icons/bi";
 import "./index.css";
+import Footer from "./components/Footer";
 
 function App() {
   const buttons = [
@@ -74,7 +73,7 @@ function App() {
       </p>
       <h1 className="text-2xl py-4 font-bold">Donice Ubaru</h1>
 
-      <div className="w-full md:w-3/5">
+      <div className="w-full md:w-4/5">
         {buttons.map((button) => (
           <div className="bg-gray-200 rounded-lg text-sm p-5 my-5 drop-shadow-[0_15px_25px_rgba(0,0,0,0.02)] hover:drop-shadow-md hover:bg-gray-300">
             <a href={button.href} id={button.id}>
@@ -101,19 +100,8 @@ function App() {
         </a>
       </div>
 
-      <div className="border w-full mt-8"></div>
-
-      <footer className="my-8 w-full text-left md:flex md:space-x-64 md:justify-center md:align-middle">
-        <img src={Zuri} alt="zuri" className="w-30 border-sky-500 mb-2" />
-        <span className="text-gray-500 mb-2">
-          HNG Internship 9 Frontend Task
-        </span>
-        <img
-          src={Ingresive}
-          alt="IG4"
-          className="w-28 border-sky-500 mt-2 md:w-28"
-        />
-      </footer>
+<Footer />
+      
     </div>
   );
 }
