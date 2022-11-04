@@ -82,7 +82,7 @@ const Contact = () => {
             <input
               ref={userRef}
               type="text"
-              id="firstname"
+              id="first_name"
               placeholder="Enter your first name"
               aria-describedby="fnerror"
               onChange={(e) => setUser(e.target.value)}
@@ -110,7 +110,7 @@ const Contact = () => {
             </label>
             <input
               type="text"
-              id="lastname"
+              id="last_name"
               placeholder="Enter your last name"
               aria-describedby="lnerror"
               onChange={(e) => setUser(e.target.value)}
