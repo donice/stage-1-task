@@ -2,10 +2,11 @@ import React from "react";
 import ProfileImage from "../../src/img/ProfilePic.jpg";
 import Slack from "../img/slack.svg";
 import Github from "../img/Social_icon.svg";
-import Link from "../img/Icon-md.png";
+import Icon from "../img/Icon-md.png";
 import { FiCamera } from "react-icons/fi";
 import { BiDotsHorizontalRounded } from "react-icons/bi";
 import '../index.css'
+import { Link } from "react-router-dom"
 
 const Linktree = () => {
   const buttons = [
@@ -39,18 +40,13 @@ const Linktree = () => {
       href: "https://books.zuri.team/design-rules ",
       id: "book__design",
     },
-    {
-      linkName: "Contact Me",
-      href: "/contact",
-      id: "contact"
-    }
   ];
 
   return (
     <div className="App">
       <div>
         <div className="rightDesktop hidden md:block w-10 h-10 mt-4 mr-6 font-bold border-2 border-dashed rounded-full md:mr-20 hover:bg-gray-200">
-          <img src={Link} alt="icon" />
+          <img src={Icon} alt="icon" />
         </div>
         <div className="rightMobile block md:hidden w-10 h-10 mt-4 mr-6 font-bold border-2 border-dashed rounded-full md:mr-20">
           <BiDotsHorizontalRounded />
@@ -84,6 +80,10 @@ const Linktree = () => {
             </a>
           </div>
         ))}
+        <div className="bg-gray-200 rounded-lg text-sm p-5 my-5 drop-shadow-[0_15px_25px_rgba(0,0,0,0.02)] hover:drop-shadow-md hover:bg-gray-300">
+          <Link to="/contact" id="contact">Contact Me</Link>
+        </div>
+        
       </div>
 
       <div className="flex">
